@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			{{ date({aDate: weatherDay.dt}) | date: dateFormat }}
+		</h3>
+	</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item">DAYTIME: {{ temp({aTemp: weatherDay.temp.day}) }}°</li>
+			<li class="list-group-item">HIGH/LOW : {{ temp({aTemp: weatherDay.temp.max})}}°/ {{ temp({aTemp: weatherDay.temp.min})}}°</li>
+			<li class="list-group-item">MORNING/NIGHT : {{ temp({aTemp: weatherDay.temp.night})}}°/ {{ temp({aTemp: weatherDay.temp.morn})}}°</li>
+			<li class="list-group-item">COND : {{ cond({condition: weatherDay.weather[0].description})}}</li>
+			<li class="list-group-item">WIND: {{compass({degree: weatherDay.deg})}} {{weatherDay.speed}} mph</li>
+			<li class="list-group-item">HUMIDITY: {{weatherDay.humidity}}%</li>
+
+		</ul>
+	</div>
+</div>

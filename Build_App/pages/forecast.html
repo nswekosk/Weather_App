@@ -1,0 +1,13 @@
+<h1>Forecast</h1>
+
+<p>City : {{ city }} </p>
+
+<a href="#/forecast/2" ng-class="{'bg-primary': numDays === '2'}">2</a> | <a href="#/forecast/5" ng-class="{'bg-primary': numDays === '5'}">5</a> | <a href="#/forecast/7" ng-class="{'bg-primary': numDays === '7'}">7</a>
+
+<div ng-repeat="w in weatherResult.list">
+	<div class="row">
+		<div class="col-md-12">
+			<weather-result dateFormat="MMM d, y" date="convertDate(aDate)" temp="convertToFahrenheit(aTemp)" weather-day="w" cond="condFormat(condition)" compass="degToCompass(degree)"></weather-result>
+		</div>
+	</div>
+</div>
