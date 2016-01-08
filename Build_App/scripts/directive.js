@@ -2,7 +2,7 @@
 app.directive('weatherResult', function(){
 	return {
 		restrict: "E",
-		templateUrl: "directives/weatherResult.html",
+		templateUrl: "views/weatherResult.html",
 		replace: true,
 		scope: {
 			dateFormat: "@",

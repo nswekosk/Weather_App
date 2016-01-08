@@ -1,4 +1,4 @@
-var API_KEY = '...';
+var API_KEY = "...";
 
 var weather_api = 'http://api.openweathermap.org/data/2.5/forecast/daily?APPID=' + API_KEY;
 

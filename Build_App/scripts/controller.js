@@ -20,9 +20,9 @@ app.controller('forecast-controller', ["$scope",'forecastService', "$resource","
 
 	$scope.numDays = $routeParams.numDays || '2';
 
-	/////////
-	// 
-	//////////
+	//////////////////////////////////////////////
+	// Service handles getting weather from API //
+	//////////////////////////////////////////////
 
 	$scope.weatherResult = weatherService.getWeather($scope.city, $scope.numDays);
 
